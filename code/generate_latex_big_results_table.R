@@ -19,7 +19,7 @@ get.dnn.performance <- function(x) {
 
 
 
-setwd("/Users/daniel.urda/Documents/GitKraken/pcDNNs/results/no2-meteo dataset/relu/")
+setwd("../results/no2-meteo dataset/relu/")
 
 models.order = c("lasso","fcDNN","pcDNN")
 pcDNNs.order = c("station","time","type","all")
