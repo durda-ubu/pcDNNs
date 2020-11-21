@@ -21,7 +21,7 @@ get.dnn.performance <- function(x) {
 
 setwd("../results/no2-meteo dataset/spocu/")
 
-models.order = c("lasso","fcDNN","pcDNN")
+models.order = c("lasso","elnet","fcDNN","pcDNN")
 pcDNNs.order = c("station","all")
 
 tabla = data.frame(N=numeric(0), type=numeric(0), model=character(0), pcor=numeric(0), mse=numeric(0), stringsAsFactors = F)
@@ -34,6 +34,10 @@ for (dir in directorios) {
                         results.csv  = read.csv(file=paste0(getwd(),"/",dir,"/",model,"/",model,"_global_model.csv"), header=T, sep=",", stringsAsFactors = F)
                         results.perf = get.lasso.performance(results.csv)
                         tabla[nrow(tabla)+1,] = c(dsize, 0, "Lasso", results.perf)
+                } else if (model == "elnet") {
+                        results.csv  = read.csv(file=paste0(getwd(),"/",dir,"/",model,"/",model,"_global_model.csv"), header=T, sep=",", stringsAsFactors = F)
+                        results.perf = get.lasso.performance(results.csv)
+                        tabla[nrow(tabla)+1,] = c(dsize, 0, "Elastic net", results.perf)
                 } else if (model == "fcDNN") {
                         results.csv  = read.csv(file=paste0(getwd(),"/",dir,"/",model,"/",model,"_global_model.csv"), header=T, sep=",", stringsAsFactors = F)
                         results.perf = get.dnn.performance(results.csv)
