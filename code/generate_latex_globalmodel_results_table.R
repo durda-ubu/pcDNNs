@@ -52,6 +52,6 @@ for (dir in directorios) {
 
 tabla = tabla[order(tabla$N, tabla$type),]
 for (i in 1: nrow(tabla)) {
-        cat(tabla[i,1], "&", tabla[i,3], "&", tabla[i,4], "&", tabla[i,5], "&", tabla[i,6], "\\\\\n")
+        cat(tabla[i,1], "&", tabla[i,3], "&", tabla[i,4], "&", tabla[i,5], "\\\\\n")
 }
 
