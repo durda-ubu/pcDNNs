@@ -1,0 +1,2 @@
+repetition,cviter,trial,growth.factors,num.extra.layers,units1,units2,batch.normalization,dropouts1,dropouts2,dropouts3,mse.test.mean,time.in.mins
+1,1,1,7|10|8|19|8|2|8|17|19|10|7|5|17|10|20|5|15|19|17|15|14|18|18|3|7|9|11|15|7,2,42,44,TRUE,0.461906231338313,0.172113776923571,0.262089788301253,162.803661613478,145.792114766439
